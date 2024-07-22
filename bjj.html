@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buraco Negro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+<style type="text/css" id="dcoder_stylesheet">body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#login-page {
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+#login-page input {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#login-page button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#login-page button:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+</style></head>
+<body>
+    <!-- Página de Login -->
+    <div id="login-page" class="page">
+        <h1>Buraco Negro</h1>
+        <p>Digite a palavra mágica para entrar:</p>
+        <input type="text" id="password-input" placeholder="Palavra mágica">
+        <button onclick="checkPassword()">Entrar</button>
+        <p id="error-message" style="color: red; display: none;">Palavra mágica incorreta. Tente novamente.</p>
+    </div>
+
+    <!-- Página de Apresentação -->
+    <div id="main-page" class="page" style="display: none;">
+        <header>
+            <h1>Bem-vindo ao Buraco Negro</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#pdfs">Livros em PDF</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="about">
+                <h2>Sobre</h2>
+                <p>Este site é dedicado a facilitar a interação com anotações, livros e vídeos. Navegue pelas seções para acessar PDFs de livros e vídeos do YouTube relacionados ao tema.</p>
+            </section>
+            
+            <section id="pdfs">
+                <h2>Livros em PDF</h2>
+                <ul>
+                    <li><a href="link_do_seu_pdf1.pdf" target="_blank">Livro 1</a></li>
+                    <li><a href="link_do_seu_pdf2.pdf" target="_blank">Livro 2</a></li>
+                    <li><a href="link_do_seu_pdf3.pdf" target="_blank">Livro 3</a></li>
+                </ul>
+            </section>
+            
+            <section id="videos">
+                <h2>Vídeos</h2>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/seu_video_1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/seu_video_2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2024 Buraco Negro. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+<script type="text/javascript" id="dcoder_script">function checkPassword() {
+    const passwordInput = document.getElementById('password-input');
+    const errorMessage = document.getElementById('error-message');
+    const loginPage = document.getElementById('login-page');
+    const mainPage = document.getElementById('main-page');
+
+    if (passwordInput.value === 'buraco negro') {
+        loginPage.style.display = 'none';
+        mainPage.style.display = 'block';
+    } else {
+        errorMessage.style.display = 'block';
+    }
+}
+</script></body></html>
